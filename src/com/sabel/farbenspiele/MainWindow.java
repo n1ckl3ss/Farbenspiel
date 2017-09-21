@@ -14,7 +14,7 @@ public class MainWindow extends JFrame {
 
     public MainWindow() throws HeadlessException {
         super("Farbenspiel");
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(500, 500);
         this.initComponents();
         this.initEvents();
