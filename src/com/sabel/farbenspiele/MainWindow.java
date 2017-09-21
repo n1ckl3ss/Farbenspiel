@@ -16,8 +16,16 @@ public class MainWindow extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 500);
         this.initComponents();
+        this.initEvents();
         this.jpanel.setBackground(Color.BLUE);
         this.setVisible(true);
+    }
+
+    private void initEvents() {
+        MeinActionListener mal = new MeinActionListener(this.jpanel);
+        this.jbtnBlue.addActionListener(mal);
+        this.jbtnGreen.addActionListener(mal);
+        this.jbtnYellow.addActionListener(mal);
     }
 
 
