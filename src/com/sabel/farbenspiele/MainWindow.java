@@ -17,33 +17,41 @@ public class MainWindow extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 500);
         this.initComponents();
+        this.initEvents();
         this.jpanel.setBackground(Color.BLUE);
         this.setVisible(true);
     }
 
-    private void initComponents() {
-        this.jpanel = new JPanel();
-        this.jbtnBlue = new JButton("Blau");
-
+    private void initEvents() {
         jbtnBlue.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                jpanel.setBackground(Color.BLUE);
-                }
-            }
+                                       public void actionPerformed(ActionEvent e) {
+                                           jpanel.setBackground(Color.CYAN);
+                                       }
+                                   }
         );
 
-        this.jbtnGreen = new JButton("Grün");
+
         jbtnGreen.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 jpanel.setBackground(Color.GREEN);
             }
         });
-        this.jbtnYellow = new JButton("Gelb");
+
         jbtnYellow.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 jpanel.setBackground(Color.YELLOW);
             }
         });
+    }
+
+
+    private void initComponents() {
+        this.jpanel = new JPanel();
+        this.jbtnBlue = new JButton("Blau");
+        this.jbtnGreen = new JButton("Grün");
+        this.jbtnYellow = new JButton("Gelb");
+
+
         this.jpanel.add(jbtnBlue);
         this.jpanel.add(jbtnGreen);
         this.jpanel.add(jbtnYellow);
